@@ -1,11 +1,12 @@
 // get, betById, post, put, delete
+import { mockUrl } from "../constants/constants.mjs";
 export const sinanHelper = {
     get: async function() {
         const requestOptions = {
             method: 'GET',
             redirect: 'follow',
         }
-        let response = await fetch('https://6679b6a118a459f6395127e1.mockapi.io/api/gets', requestOptions);
+        let response = await fetch(`${mockUrl}/gets`, requestOptions);
         response = await response.json();
         return response;
     },
@@ -15,7 +16,7 @@ export const sinanHelper = {
             redirect: 'follow',
         };
     
-        let response = await fetch(`https://6679b6a118a459f6395127e1.mockapi.io/api/gets${id}`, requestOptions);
+        let response = await fetch(`${mockUrl}/gets${id}`, requestOptions);
         response = await response.json();
         return response;
     },
@@ -34,7 +35,7 @@ export const sinanHelper = {
             body: raw
         };
     
-        let response = await fetch(`https://6679b6a118a459f6395127e1.mockapi.io/api/gets`, requestOptions);
+        let response = await fetch(`${mockUrl}/gets`, requestOptions);
         response = await response.json();
         return response;
     },
@@ -53,7 +54,7 @@ export const sinanHelper = {
             body: raw
         };
     
-        let response = await fetch(`https://6679b6a118a459f6395127e1.mockapi.io/api/gets${id}`, requestOptions);
+        let response = await fetch(`${mockUrl}/gets${id}`, requestOptions);
         response = await response.json();
         return response;
     },
@@ -63,7 +64,7 @@ export const sinanHelper = {
             redirect: 'follow'
         };
     
-        let response = await fetch(`https://6679b6a118a459f6395127e1.mockapi.io/api/gets${id}`, requestOptions);
+        let response = await fetch(`${mockUrl}/gets${id}`, requestOptions);
         response = await response.json();
         return response;
     }
