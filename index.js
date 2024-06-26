@@ -1,6 +1,7 @@
 import { sinanHelper } from './helpers/sinanHelper';
 import { ApiObj } from './helpers/NebiHelper';
-import {EgoAPI} from "./helpers/EgoCall"
+import { EgoAPI } from "./helpers/EgoCall"
+import { elifHelper } from './helpers/elifHelper';
 
 
 
@@ -18,7 +19,7 @@ async function testGultekinAPIMethods() {
         // GET by ID request
         const getByIdDataPromise = client.getById('gets', 1);
         await Promise.allSettled([getDataPromise, getByIdDataPromise]);
-        
+
 
         // GET request
         const getData = await client.get('gets');
@@ -52,8 +53,9 @@ console.logetById(1);
 sinanHelper.postData("ahmet", "avatarsız", "abidik-gubidik");
 sinanHelper.putData(1, "senin adın ahmet", "avatarın-yok", "hacı-token-kalmadı");
 sinanHelper.deleteData(54);
-
-
+console.log(elifHelper.get());
+elifHelper.PostElif("2", "Cansu yeni", "34");
+elifHelper.PutElif(3, "Updated Elif", 26);
 
 
 
@@ -61,14 +63,14 @@ sinanHelper.deleteData(54);
 //Egomen çağırıyor
 
 EgoAPI.
-EgoAPI.
-EgoAPI.
-EgoAPI.
+    EgoAPI.
+    EgoAPI.
+    EgoAPI.
 
 
-//nebi Fetchs Metods
+    //nebi Fetchs Metods
 
-ApiObj.getFetch();
+    ApiObj.getFetch();
 ApiObj.deleteFetch(2);
 ApiObj.postFetch("ahmet", "avatar", "");
 ApiObj.putFetch1, "senin adın ahmet", "avatarın-yok", "hacı-token-kalmadı"();
