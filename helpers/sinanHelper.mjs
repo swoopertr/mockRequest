@@ -16,7 +16,7 @@ export const sinanHelper = {
             redirect: 'follow',
         };
     
-        let response = await fetch(`${mockUrl}/gets${id}`, requestOptions);
+        let response = await fetch(`${mockUrl}/gets/${id}`, requestOptions);
         response = await response.json();
         return response;
     },
@@ -54,7 +54,7 @@ export const sinanHelper = {
             body: raw
         };
     
-        let response = await fetch(`${mockUrl}/gets${id}`, requestOptions);
+        let response = await fetch(`${mockUrl}/gets/${id}`, requestOptions);
         response = await response.json();
         return response;
     },
@@ -64,7 +64,7 @@ export const sinanHelper = {
             redirect: 'follow'
         };
     
-        let response = await fetch(`${mockUrl}/gets${id}`, requestOptions);
+        let response = await fetch(`${mockUrl}/gets/${id}`, requestOptions);
         response = await response.json();
         return response;
     }
